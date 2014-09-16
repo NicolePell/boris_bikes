@@ -13,7 +13,7 @@ class DockingStation
 	end
 
 	def release(bike)
-		@bikes.pop
+		@bikes.delete(bike)
 	end
 
 end
