@@ -22,6 +22,10 @@ describe DockingStation do
 		expect(station.bike_count).to eq(0)
 	end
 
+	it "should not release bike that isn't there" do
+		expect { station.release(bike) }.to raise_error(RuntimeError)
+	end
+
 	it "should know when it's full" do
 		expect(station).not_to be_full
 		20.times { station.dock(Bike.new) }
@@ -30,7 +34,7 @@ describe DockingStation do
 
 	it "should not accept the bike if it's full" do
 		20.times { station.dock(Bike.new) }
-		expect(lambda { station.dock(bike) }).to raise_error(RuntimeError)
+		expect { station.dock(bike) }.to raise_error(RuntimeError)
 	end
 
 	it "should return a list of available bikes" do
