@@ -19,7 +19,7 @@ class DockingStation
 
 	def release(bike)
 		raise "Station is empty" if empty?
-		@bikes.delete(bike)
+		@bikes.delete(available_bikes.pop)
 	end
 
 	def full?

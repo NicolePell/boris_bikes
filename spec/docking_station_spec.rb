@@ -18,6 +18,16 @@ describe DockingStation do
 		expect(station.bike_count).to eq(0)
 	end
 
+	it "should only release from available bikes" do
+		working_bike, broken_bike = Bike.new, Bike.new
+		broken_bike.break!
+		station.dock(working_bike)
+		station.dock(broken_bike)
+		station.release(working_bike)
+		station.release(broken_bike)
+		expect(station.bike_count).to eq(1)
+	end
+
 	it "should know when it's empty" do
 		expect(station.bike_count).to eq(0)
 	end
