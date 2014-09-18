@@ -11,5 +11,11 @@ class Van
 		end 
 	end
 
+	def dock_fixed(garage)
+		garage.available_bikes.each do |bike|
+			dock(bike)
+			garage.release(bike)
+		end
+	end
 end
 
