@@ -28,6 +28,10 @@ module BikeContainer
 		bikes.delete(available_bikes.pop)
 	end
 
+	def release_broken
+		bikes.delete(broken_bikes.pop)
+	end
+
 	def full?
 		bike_count == capacity 
 	end
@@ -42,10 +46,6 @@ module BikeContainer
 
 	def broken_bikes
 		bikes.select {|bike| bike.broken? }
-	end
-
-	def release_broken
-		bikes.delete(broken_bikes.pop)
 	end
 	
 end
