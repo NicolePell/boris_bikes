@@ -40,4 +40,8 @@ module BikeContainer
 		bikes.reject {|bike| bike.broken? }
 	end
 
+	def broken_bikes
+		bikes.select {|bike| bike.broken? }
+	end
+	
 end
