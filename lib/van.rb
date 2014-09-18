@@ -4,9 +4,12 @@ class Van
 
 	include BikeContainer
 
+	def dock_broken(station)
+		station.broken_bikes.each do |bike|
+			dock(bike)
+			station.release_broken
+		end 
+	end
+
 end
 
-# def release(bike)
-# 		raise "Station is empty" if empty?
-# 		bikes.delete(available_bikes.pop)
-# 	end
