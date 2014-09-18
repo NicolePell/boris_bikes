@@ -4,10 +4,6 @@ class Van
 
 	include BikeContainer
 
-	def broken_bike
-		bikes.select {|bike| bike.broken? }
-	end
-
 end
 
 # def release(bike)
