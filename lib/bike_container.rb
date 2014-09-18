@@ -43,5 +43,9 @@ module BikeContainer
 	def broken_bikes
 		bikes.select {|bike| bike.broken? }
 	end
+
+	def release_broken
+		bikes.delete(broken_bikes.pop)
+	end
 	
 end
