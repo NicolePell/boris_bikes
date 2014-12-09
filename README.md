@@ -1,7 +1,7 @@
 Boris Bikes
 ===========
 
-[Makers Academy][https://www.makersacademy.com] week 1 project:
+[Makers Academy](https://www.makersacademy.com) week 1 project:
 
 Description
 -----------
@@ -22,7 +22,7 @@ How to use
 ----------
 Clone the repository:
 ```shell
-$ git clone git@github.com:scully87/boris_bikes.git
+$ git clone git@github.com:nicolepell/boris_bikes.git
 ```
 
 Change into the directory:
